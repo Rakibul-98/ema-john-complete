@@ -1,0 +1,14 @@
+.banner-section p{
+    line-height: 50px;
+}
+.banner-image{
+    width: 400px;
+}
+.banner-title .shop-btn{
+    background-color: #ff9900c6;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.banner-title .shop-btn:hover{
+    background-color: #ff9900;
+}

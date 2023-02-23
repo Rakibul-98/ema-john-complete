@@ -1,0 +1,19 @@
+.product-card{
+    border: 1px solid black;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    border-radius: 5px;
+}
+.product-card .product-img{
+    height: 286px;
+    width: 286px;
+    border-radius: 10px;
+}
+.cart-btn{
+    background-color: #ffe1b3;
+    width: 100%;
+}
+.cart-btn:hover{
+    background-color: #f59d19;
+}
