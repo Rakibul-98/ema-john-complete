@@ -13,7 +13,7 @@ const ProductCart = (props) => {
                 <p>Seller: {seller}</p>
                 <p>Rating: {ratings}</p>
             </div>
-            <button onClick={()=>addToCart(id)} className='cart-btn absolute bottom-0 rounded-b py-2'>Add to cart</button>
+            <button onClick={()=>addToCart(props.product)} className='cart-btn absolute bottom-0 rounded-b py-2'>Add to cart</button>
         </div>
     );
 };

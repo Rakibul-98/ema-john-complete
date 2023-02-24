@@ -3,18 +3,20 @@ import Cart from '../Cart/Cart';
 import ProductCart from '../ProductCard/ProductCard';
 import './Shop.css';
 
-const addToCart = (id)=>{
-    
-}
-
 const Shop = () => {
     const [products, setProducts] = useState([]);
+    const [cart,setCart] = useState([]);
 
     useEffect(()=>{
         fetch("fakeData/products.json")
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[])
+
+    const addToCart = (product)=>{
+        const newCart=[...cart, product];
+        setCart(newCart);
+    }
 
     return (
         <div className='shop-section grid grid-cols-5'>
@@ -30,7 +32,7 @@ const Shop = () => {
                 </span>
             </div>
             <div className='cart-section'>
-                <Cart/>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
