@@ -5,8 +5,10 @@ const Cart = ({cart}) => {
 
     let total=0;
     let shipping=0;
+    let quantity = 0;
     for (const product of cart) {
-        total=total+product.price;
+        quantity = quantity+product.quantity;
+        total=total+product.price*product.quantity;
         shipping=shipping+product.shipping;
     }
 
@@ -24,7 +26,7 @@ const Cart = ({cart}) => {
     return (
         <div className="h-screen p-10 sticky top-0">
             <h5 className='text-center text-2xl font-bold mb-5'>Order Summery</h5>
-            <p>Selected Items: {cart.length}</p>
+            <p>Selected Items: {quantity}</p>
             <p>Total price: $ {total}</p>
             <p>Vat: $ {vat}</p>
             <p>Total Shipping cost: $ {shipping} </p>
